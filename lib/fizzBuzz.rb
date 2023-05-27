@@ -2,13 +2,14 @@
 puts "Please enter a number between 1-10000"
 n = gets.chomp.to_i
 
+n = 45
 a = 1
 b = n
 range = (Range.new(a, b, false)).to_a
 
 string_array = []
 
-def FizzerBuzzer(range)
+# def FizzerBuzzer(range)
   range.each do |i|
     if i % 3 == 0 && i % 5 == 0
       string_array << 'FizzBuzz'
@@ -19,7 +20,9 @@ def FizzerBuzzer(range)
     else
       string_array << i
     end
-end
+  end
+#   return string_array
+# end
 
 puts string_array
 
