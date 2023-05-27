@@ -1,41 +1,43 @@
-# class FizzBuzz
 
-  n = 30
-  a = 1
-  b = n
-  range = (Range.new(a, b, false)).to_a
-  puts range
- 
+puts "Please enter a number between 1-10000"
+n = gets.chomp.to_i
 
+a = 1
+b = n
+range = (Range.new(a, b, false)).to_a
 
-  # def fizzerBuzzer(range)
-  #   # array.map { |o| if condition(o) then obj else o }
-  #   range.each_with_index do {|element,index|  }
-  #     if x % 3 == 0 && x % 5 == 0
-  #       # replace (is that a thing?) x with FizzBuzz
-  #     elsif x % 3 == 0
-  #       # replace x with Fizz
-  #     elsif x % 5 == 0
-  #       # replace x with Buzz
-  #     # else x % 3,5 !=0
-  #     #   do nothing
-  #     end
-  #   end
-  #   return string_array
-  # end
+string_array = []
 
+def FizzerBuzzer(range)
+  range.each do |i|
+    if i % 3 == 0 && i % 5 == 0
+      string_array << 'FizzBuzz'
+    elsif i % 3 == 0
+      string_array << 'Fizz'
+    elsif i % 5 == 0
+      string_array << 'Buzz'
+    else
+      string_array << i
+    end
+end
 
-#   string_array.collect! do |element|
+puts string_array
+
+#   range.collect! do |element|
 #     case element
-#     when x % 3 == 0 && x % 5 == 0
-#       'FizzBuzz'
-#     when x % 3 == 0
-#       'Fizz'
-#     when x % 5 == 0
-#       'Buzz'
+#     when element % 3 == 0 && element % 5 == 0
+#       string_array << 'FizzBuzz'
+#     when element % 3 == 0
+#       string_array << 'Fizz'
+#     when element % 5 == 0
+#       string_array << 'Buzz'
 #     else
-#       element
+#       string_array << element
 #     end
 #   end
+# puts string_array
 
-# end
+  # def fizzerBuzzer(range)
+
+  #  return string_array
+  # end
