@@ -26,6 +26,33 @@ string_array = []
 
 puts string_array
 
+###################
+# OR
+string_array = []
+# array = []
+# def fizzerBuzzer(range)
+  # array = []
+  # string_array = array
+  range.each do |i|
+    if i % 3 == 0 && i % 5 == 0
+      string_array << "FizzBuzz"
+    elsif i % 3 == 0
+      string_array << "Fizz"
+    elsif i % 5 == 0
+      string_array << "Buzz"
+    else
+      string_array << i.to_s
+    end
+  # return array
+  end
+# end
+
+# string_array = array
+puts string_array
+###################
+
+# can delete below if you cant solve it
+###################
 #   range.collect! do |element|
 #     case element
 #     when element % 3 == 0 && element % 5 == 0
@@ -44,3 +71,4 @@ puts string_array
 
   #  return string_array
   # end
+###################
